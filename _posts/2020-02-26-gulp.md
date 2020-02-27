@@ -2,7 +2,9 @@
 title: Gulp4 setting
 layout: post
 tags:
-- frontpage
+- gulp
+- gulp4
+- gulp setting
 ---
 
 # Gulp4로 세팅하기
@@ -150,4 +152,3 @@ gulpfile.babel.js 오른쪽마우스 클릭후 show gulp tast클릭하면 아래
 그러면 dist폴더에 빌드가 완료된 파일들이 나오게된다.
 
 ![dist](/images/posts/dist.jpg)
-
