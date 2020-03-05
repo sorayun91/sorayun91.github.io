@@ -53,3 +53,42 @@ console.log("lastName" in person); //true
 
 ---
 
+
+* for/in 문
+> 객체안의 프로퍼티를 순회하는 반복문 / 
+for (변수 in 객체표현식) 문장 / 
+객체표현식이 null 또는 undefined이면 빠져나옴
+
+{% highlight js %}
+
+ let obj = {a:1, b:2, c:3};
+ for (let p in obj) {
+     console.log(`p = ${p}`);
+ }
+ 
+ /*
+ p = a
+ p = b
+ p = c
+ 
+ 프로퍼티 값만 가져와서 p에 대입함
+ 따라서 프로퍼티값을 가져오려면 
+ 
+ obj[p] 로 접근함
+ 
+ */
+ 
+  let obj = {a:1, b:2, c:3};
+  for (let p in obj) {
+      console.log(`obj.${p} = ${obj[p]}`);
+  }
+  
+   /*
+   obj.a = 1
+   obj.b = 2
+   obj.c = 3
+   */
+ 
+
+{% endhighlight %}
+
