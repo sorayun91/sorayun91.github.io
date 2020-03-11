@@ -18,6 +18,30 @@ console.log(`my name is ${name}`)
 
 {% endhighlight %}
 
+* 나머지 매개변수
+함수의 임자가 들어가는 부분에 ...을 입력하면 그만큼의 인수를 배열로 받을 수 있다.
+...로 표현한 인자를 나머지 매게변수라고 한다.
+
+{% highlight js %}
+
+function f(a, b, ...args) { // 1,2 다음의 매개변수를 배열로 받아라
+    console.log(a, b, args); // 즉 args는 배열임
+}
+
+f(1,2,3,4,5,6); // 1 2 [3, 4, 5, 6]
+
+//or
+
+var sum = (...args) => {
+    for(let i=0, s=0; i<args.length; i++) {
+        s += args[i];
+    }
+}
+sum(1,2,3,4,5);
+
+{% endhighlight %}
+
+
 ---
 
 ## 기타
@@ -92,3 +116,40 @@ for (변수 in 객체표현식) 문장 /
 
 {% endhighlight %}
 
+---
+
+* 즉시실행함수
+
+{% highlight js %}
+
+//일반적인 익명함수
+let f = function() {...}
+r();
+
+//즉시실행함수로 쓰면
+(function() {...})();
+//or
+(function() {...}());
+
+//인수를 넘길땐
+(fuction(a,b) {...})(1,2);
+
+//함수표현식 (함수실행결과를 변수에 할당함)
+let x = (function() {...})();
+
+//화살표함수의 즉시실행함수
+(x => x*x)(3); // 9
+
+{% endhighlight js %}
+
+---
+
+* undefined 체크하는 가장좋은 방법
+
+ {% highlight js %}
+ 
+ typeof x === 'undefined'
+ 
+ {% endhighlight js %}
+ 
+ ---
