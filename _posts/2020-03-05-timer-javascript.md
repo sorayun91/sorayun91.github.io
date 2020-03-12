@@ -30,7 +30,7 @@ var timer = setTimeout(function() {
     console.log(new Date());
 }, 2000)
 ...
-clearTimeout(timer)
+clearTimeout(timer)dl   dl
 {% endhighlight js %}
 
 ---
@@ -53,7 +53,7 @@ setInterval("console.log(new Date())", 1000)
 var timer = setInterval(function() {
     console.log(new Date());
 }, 1000)
-...
+ 
 clearInterval(timer); 
 
 {% endhighlight js %}
