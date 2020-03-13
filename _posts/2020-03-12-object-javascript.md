@@ -72,3 +72,45 @@ console.log( obj[p[i]] ); // 배열요소를 꺼내서 출력
 console.log(Object.getOwnPropertyNames(person));
 
 {% endhighlight js %}
+
+## 객체 잠그기 
+
+* 확장방지 : Object.preventExtensions 메서드
+
+{% highlight js %}
+
+var person = { name: "Tom" }
+Object.preventExtensions(person); // person는 이제 확장할수 없음(프로퍼티 추가안됨)
+person.age = 17;
+console.log("age" in person) // false
+
+{% endhighlight js %}
+
+* 밀봉 : Object.seal 메서드 (읽기와 쓰기만 가능)
+
+{% highlight js %}
+
+var person = { name: "Tom" }
+Object.seal(person); // 객체 밀봉
+person.age = 17; // 무시됨
+delete person.name; // 무시됨
+console.log(Object.getOwnPropertyDescriptor(person, "name")); 
+//person의 name의 스크립터를 가져온다
+person.name = "Huck";
+console.log(person); // name = "Huck"
+
+console.log(Object.isSealed(person)); // 밀봉인지 확인 true
+
+{% endhighlight js %}
+
+* 동결 : Object.freeze 메서드 (읽기전용)
+
+{% highlight js %}
+
+var person = { name: "Tom" }
+Object.freeze(person); // 읽기만가능함
+
+console.log(Object.isFrozen(person)); // 밀봉인지 확인 true
+
+
+{% endhighlight js %}
