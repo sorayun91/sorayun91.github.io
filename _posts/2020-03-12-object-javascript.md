@@ -86,6 +86,7 @@ console.log("age" in person) // false
 
 {% endhighlight js %}
 
+
 * 밀봉 : Object.seal 메서드 (읽기와 쓰기만 가능)
 
 {% highlight js %}
@@ -102,6 +103,7 @@ console.log(person); // name = "Huck"
 console.log(Object.isSealed(person)); // 밀봉인지 확인 true
 
 {% endhighlight js %}
+
 
 * 동결 : Object.freeze 메서드 (읽기전용)
 
