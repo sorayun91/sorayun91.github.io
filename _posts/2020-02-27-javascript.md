@@ -34,7 +34,7 @@ f(1,2,3,4,5,6); // 1 2 [3, 4, 5, 6]
 
 var sum = (...args) => {
     for(let i=0, s=0; i<args.length; i++) {
-        s += args[i];
+        s += args[i];ㅁ
     }
 }
 sum(1,2,3,4,5);
